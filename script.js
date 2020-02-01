@@ -1,5 +1,7 @@
 'use strict'
 
+// FETCH API
+
 // Obteniendo lista de paises del DOM
 const countriesList = document.querySelector('.countries-list');
 
@@ -29,3 +31,20 @@ fetch('https://restcountries.eu/rest/v2/all')
         });
     });
 
+// THEME SWITCH
+
+// Obteniendo elementos del DOM
+const toggleButton = document.querySelector('#theme-switch');
+const moonImage = document.querySelector('#theme-switch img');
+const body = document.querySelector('body');
+
+// Evento click en toggleButton
+toggleButton.addEventListener('click', function(){
+    // Agregando clase "Dark" al body
+    body.classList.toggle('dark');    
+    
+    // Insertando imagen según modo activado
+    if(body.classList.value === 'dark'){
+        moonImage.setAttribute('src', './img/moon-solid.svg');
+    }else{ moonImage.setAttribute('src', './img/moon-regular.svg'); }
+});
