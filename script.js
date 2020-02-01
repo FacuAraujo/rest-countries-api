@@ -14,12 +14,14 @@ fetch('https://restcountries.eu/rest/v2/all')
             // Template String
             var countryCard = `
                                 <article class="country">
-                                <div class="flag"><img src="${country.flag}" alt="${country.name}"></div>
-                                <div class="name">${country.name}</div>
-                                <div class="population"><span>Population: </span>${country.population}</div>
-                                <div class="region"><span>Region: </span>${country.region}</div>
-                                <div class="capital"><span>Capital: </span>${country.capital}</div>
-                                </article>
+                                <div class="flag" style="background-image: url(${country.flag});"></div>
+                                <div class="country-info">
+                                    <div class="name">${country.name}</div>
+                                    <div class="population"><span>Population: </span>${country.population}</div>
+                                    <div class="region"><span>Region: </span>${country.region}</div>
+                                    <div class="capital"><span>Capital: </span>${country.capital}</div>
+                                </div>
+                                </article>                                
                                 `;
 
             // Insertando Template en la lista de paises

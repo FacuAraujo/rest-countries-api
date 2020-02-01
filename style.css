@@ -8,15 +8,108 @@
 body {
   font-family: Nunito Sans;
   font-size: 14px;
+  color: #111517;
 }
 
 .container {
   width: 1200px;
+  margin: auto;
 }
 
 @media (max-width: 1200px) {
   .container {
     width: 80%;
   }
+}
+
+.header-nav {
+  background-color: white;
+  -webkit-box-shadow: 0 3px 15px #ededed;
+          box-shadow: 0 3px 15px #ededed;
+}
+
+.header-nav .header-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.5em 0;
+}
+
+.header-nav .header-content .theme-switch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 800;
+}
+
+.header-nav .header-content .theme-switch img {
+  width: 14px;
+  margin-right: .5em;
+}
+
+main {
+  background-color: #fafafa;
+  padding: 50px 0;
+}
+
+main .countries-list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 80px;
+}
+
+main .countries-list .country {
+  background-color: white;
+  -webkit-box-shadow: 0 0 10px #ededed;
+          box-shadow: 0 0 10px #ededed;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+}
+
+main .countries-list .country:hover {
+  -webkit-box-shadow: 0 0 20px 10px #ededed;
+          box-shadow: 0 0 20px 10px #ededed;
+}
+
+main .countries-list .country .flag {
+  min-height: 140px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+main .countries-list .country .flag img {
+  width: 100%;
+}
+
+main .countries-list .country .country-info {
+  padding: 1.5em 1.5em 2.2em 1.5em;
+}
+
+main .countries-list .country .country-info .name {
+  font-weight: 800;
+  margin-bottom: 1em;
+}
+
+main .countries-list .country .country-info span {
+  font-weight: 600;
+}
+
+main .countries-list .country .country-info > * {
+  margin-bottom: .2em;
 }
 /*# sourceMappingURL=style.css.map */
