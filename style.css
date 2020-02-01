@@ -26,6 +26,8 @@ body {
   background-color: white;
   -webkit-box-shadow: 0 3px 15px #ededed;
           box-shadow: 0 3px 15px #ededed;
+  -webkit-transition: background-color .4s ease-in;
+  transition: background-color .4s ease-in;
 }
 
 .header-nav .header-content {
@@ -39,6 +41,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 1.5em 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .header-nav .header-content .theme-switch {
@@ -49,6 +55,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   font-weight: 800;
+  cursor: pointer;
 }
 
 .header-nav .header-content .theme-switch img {
@@ -58,6 +65,8 @@ body {
 
 main {
   background-color: #fafafa;
+  -webkit-transition: background-color .4s ease-in;
+  transition: background-color .4s ease-in;
   padding: 50px 0;
 }
 
@@ -81,8 +90,10 @@ main .countries-list .country {
 }
 
 main .countries-list .country:hover {
-  -webkit-box-shadow: 0 0 20px 10px #ededed;
-          box-shadow: 0 0 20px 10px #ededed;
+  -webkit-box-shadow: 0 5px 20px 5px #ededed;
+          box-shadow: 0 5px 20px 5px #ededed;
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
 }
 
 main .countries-list .country .flag {
@@ -111,5 +122,30 @@ main .countries-list .country .country-info span {
 
 main .countries-list .country .country-info > * {
   margin-bottom: .2em;
+}
+
+.dark {
+  color: white;
+}
+
+.dark main {
+  background-color: #202c37;
+}
+
+.dark main .countries-list .country {
+  background-color: #2b3945;
+  -webkit-box-shadow: 0 0 10px #1d272f;
+          box-shadow: 0 0 10px #1d272f;
+}
+
+.dark main .countries-list .country:hover {
+  -webkit-box-shadow: 0 5px 20px 5px #1d272f;
+          box-shadow: 0 5px 20px 5px #1d272f;
+}
+
+.dark .header-nav {
+  background-color: #2b3945;
+  -webkit-box-shadow: 0 3px 15px #212c35;
+          box-shadow: 0 3px 15px #212c35;
 }
 /*# sourceMappingURL=style.css.map */

@@ -31,6 +31,7 @@ body {
 .header-nav {
     background-color: $White;
     box-shadow: 0 3px 15px darken($VeryLightGray, 5%);
+    transition: background-color .4s ease-in;
 
     .header-content {
         display: flex;
@@ -38,12 +39,14 @@ body {
         align-items: center;
 
         padding: 1.5em 0;
+        user-select: none; 
 
         .theme-switch {
             display: flex;
             align-items: center;
-
             font-weight: 800;
+          
+            cursor: pointer;
 
             img {
                 width: 14px;
@@ -55,6 +58,7 @@ body {
 
 main {
     background-color: $VeryLightGray;
+    transition: background-color .4s ease-in;
     padding: 50px 0;
 
     .countries-list {
@@ -72,7 +76,8 @@ main {
             cursor: pointer;
             
             &:hover {
-                box-shadow: 0 0 20px 10px darken($VeryLightGray, 5%);
+                box-shadow: 0 5px 20px 5px darken($VeryLightGray, 5%);
+                transform: translateY(-8px);
             }
             
             .flag {
@@ -105,5 +110,29 @@ main {
             
         }
     }
+}
+
+// Dark MODE
+
+.dark  {
+    color: $White;
+
+    main {
+        background-color: $VeryDarkBlue;
+
+        .countries-list .country {
+            background-color: $DarkBlue;
+            box-shadow: 0 0 10px darken($DarkBlue, 7%);
+
+            &:hover {
+                box-shadow: 0 5px 20px 5px darken($DarkBlue, 7%);
+            }
+        }
+    }
+
+    .header-nav {
+        background-color: $DarkBlue;
+        box-shadow: 0 3px 15px darken($DarkBlue, 5%);
+    }    
 }
 
