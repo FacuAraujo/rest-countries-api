@@ -75,7 +75,7 @@ main .countries-list {
   display: grid;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
-  grid-gap: 80px;
+  grid-gap: 65px;
 }
 
 main .countries-list .country {
