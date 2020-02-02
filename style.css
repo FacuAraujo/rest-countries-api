@@ -9,6 +9,7 @@ body {
   font-family: Nunito Sans;
   font-size: 14px;
   color: #111517;
+  background-color: #fafafa;
 }
 
 .container {
@@ -26,8 +27,8 @@ body {
   background-color: white;
   -webkit-box-shadow: 0 3px 15px #ededed;
           box-shadow: 0 3px 15px #ededed;
-  -webkit-transition: background-color .4s ease-in;
-  transition: background-color .4s ease-in;
+  -webkit-transition: all .4s ease-in;
+  transition: all .4s ease-in;
 }
 
 .header-nav .header-content {
@@ -64,10 +65,9 @@ body {
 }
 
 main {
-  background-color: #fafafa;
+  padding: 50px 0;
   -webkit-transition: background-color .4s ease-in;
   transition: background-color .4s ease-in;
-  padding: 50px 0;
 }
 
 main .countries-list {
@@ -84,8 +84,8 @@ main .countries-list .country {
           box-shadow: 0 0 10px #ededed;
   border-radius: 5px;
   overflow: hidden;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
   cursor: pointer;
 }
 
