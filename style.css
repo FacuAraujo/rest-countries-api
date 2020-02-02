@@ -41,6 +41,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 1.5em 0;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -68,6 +70,87 @@ main {
   padding: 50px 0;
   -webkit-transition: background-color .4s ease-in;
   transition: background-color .4s ease-in;
+}
+
+main .search {
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .search .input-search {
+  position: relative;
+  width: 450px;
+}
+
+main .search .input-search img {
+  position: absolute;
+  width: 20px;
+  padding: 14px 35px;
+}
+
+main .search .input-search input {
+  font-family: Nunito Sans;
+  color: #111517;
+  font-weight: 600;
+  width: 100%;
+  padding: 15px;
+  padding-left: 80px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 10px #ededed;
+          box-shadow: 0 0 10px #ededed;
+  -webkit-transition: all .4s ease-in, -webkit-box-shadow .2s ease-in;
+  transition: all .4s ease-in, -webkit-box-shadow .2s ease-in;
+  transition: all .4s ease-in, box-shadow .2s ease-in;
+  transition: all .4s ease-in, box-shadow .2s ease-in, -webkit-box-shadow .2s ease-in;
+}
+
+main .search .input-search input::-webkit-input-placeholder {
+  color: #92a5af;
+}
+
+main .search .input-search input:-ms-input-placeholder {
+  color: #92a5af;
+}
+
+main .search .input-search input::-ms-input-placeholder {
+  color: #92a5af;
+}
+
+main .search .input-search input::placeholder {
+  color: #92a5af;
+}
+
+main .search .input-search input:focus {
+  -webkit-box-shadow: 0 5px 20px 5px #ededed;
+          box-shadow: 0 5px 20px 5px #ededed;
+}
+
+main .search .input-select select {
+  font-weight: 600;
+  border: 0;
+  width: 200px;
+  padding: 15px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 10px #ededed;
+          box-shadow: 0 0 10px #ededed;
+  outline: none;
+  -webkit-transition: all .4s ease-in, -webkit-box-shadow .2s ease-in;
+  transition: all .4s ease-in, -webkit-box-shadow .2s ease-in;
+  transition: all .4s ease-in, box-shadow .2s ease-in;
+  transition: all .4s ease-in, box-shadow .2s ease-in, -webkit-box-shadow .2s ease-in;
+  cursor: pointer;
 }
 
 main .countries-list {
@@ -194,5 +277,17 @@ main .countries-list .country .country-info > * {
   background-color: #2b3945;
   -webkit-box-shadow: 0 3px 15px #212c35;
           box-shadow: 0 3px 15px #212c35;
+}
+
+.dark input, .dark select {
+  color: white !important;
+  background-color: #2b3945;
+  -webkit-box-shadow: 0 0 10px #1d272f !important;
+          box-shadow: 0 0 10px #1d272f !important;
+}
+
+.dark input:focus, .dark select:focus {
+  -webkit-box-shadow: 0 5px 20px 5px #1d272f;
+          box-shadow: 0 5px 20px 5px #1d272f;
 }
 /*# sourceMappingURL=style.css.map */
