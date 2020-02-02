@@ -27,6 +27,9 @@ fetch('https://restcountries.eu/rest/v2/all')
 
             // Insertando Template en la lista de paises
             countriesList.insertAdjacentHTML('beforeend', countryCard);
+
+            // Haciendo visible el search
+            const searchBlock = document.querySelector('.search').style.display = "flex";
         });
 
         document.querySelector('.loading').style.display = "none";
@@ -74,6 +77,30 @@ regionSelect.addEventListener('change', (event) => {
             el.style.display = "none";
         }else {
             el.style.display = "block";
+        }
+    }
+});
+
+// FILTER FOR A COUNTRY
+
+const inputSearch = document.querySelector('.search .input-search input');
+
+inputSearch.addEventListener('input', (event) => {
+    
+    // Obteniendo todos los paises del DOM
+    const countries = document.getElementsByClassName('country');
+
+    // Recorriendo todos los paises del DOM
+    for (let i = 0; i < countries.length; i++) {
+        const el = countries[i];
+        // Obteniendo nombre de cada pais
+        const elName = el.querySelector('.name').innerHTML.toLocaleLowerCase();        
+        
+        // Comprobar si coincide con el nombre/carácteres introducidos
+        if(elName.indexOf(event.target.value.toLocaleLowerCase()) === 0 || event.target.value === null){
+            el.style.display = "block";
+        }else {
+            el.style.display = "none";
         }
     }
 });

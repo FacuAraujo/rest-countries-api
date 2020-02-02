@@ -85,6 +85,7 @@ main .search {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  display: none;
 }
 
 main .search .input-search {
