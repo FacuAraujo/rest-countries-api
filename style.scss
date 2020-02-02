@@ -17,15 +17,18 @@ body {
     font-family: Nunito Sans;
     font-size: 14px;
     color: $VeryDarkBlue2;    
-    background-color: $VeryLightGray;    
+    background-color: $VeryLightGray;
+    transition: background-color .4s ease-in;  
 }
 
 .container {
-    width: 1200px;
+    max-width: 1200px;
     margin: auto;
+    padding: 0 2em;
 
     @media (max-width: 1200px) {
-        width: 80%;
+        width: 90%;
+        padding: 0;
     }
 }
 
@@ -41,7 +44,20 @@ body {
         flex-wrap: wrap;
 
         padding: 1.5em 0;
-        user-select: none; 
+        user-select: none;
+
+        .logo {
+            margin-right: 3em;
+
+            @media (max-width: 464px) {
+                margin-bottom: 1.5em;
+            }
+
+            @media (max-width: 362px) {
+                font-size: .9em;
+                margin-right: 0;
+            }
+        }
 
         .theme-switch {
             display: flex;
@@ -59,8 +75,7 @@ body {
 }
 
 main {
-    padding: 50px 0;
-    transition: background-color .4s ease-in;
+    padding: 50px 0;    
 
     .search {
         margin-bottom: 50px;
@@ -95,6 +110,10 @@ main {
                 transition: all .4s ease-in,
                             box-shadow .2s ease-in;
 
+                @media (max-width: 739px){
+                    margin-bottom: 1em;            
+                }
+
                 &::placeholder {
                     color: lighten($VeryDarkBlue2, 55%);
                 }
@@ -126,12 +145,26 @@ main {
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 65px;
 
+        @media (max-width: 1024px){
+            grid-template-columns: repeat(3, 1fr);            
+        }
+
+        @media (max-width: 800px){
+            grid-template-columns: repeat(2, 1fr);            
+        }
+
+        @media (max-width: 500px){
+            grid-template-columns: repeat(1, 1fr);            
+        }
+
         .country {   
             background-color: $White;
             box-shadow: 0 0 10px darken($VeryLightGray, 5%);            
             border-radius: 5px;
             overflow: hidden;
-            transition: all .2s ease-in;
+            min-height: 300px;
+            transition: all .2s ease-in-out,
+                        background-color .4s ease-in;
 
             cursor: pointer;
             
@@ -198,10 +231,9 @@ main {
 
 .dark  {
     color: $White;
+    background-color: $VeryDarkBlue;
 
     main {
-        background-color: $VeryDarkBlue;
-
         .countries-list .country {
             background-color: $DarkBlue;
             box-shadow: 0 0 10px darken($DarkBlue, 7%);

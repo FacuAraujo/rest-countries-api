@@ -10,16 +10,20 @@ body {
   font-size: 14px;
   color: #111517;
   background-color: #fafafa;
+  -webkit-transition: background-color .4s ease-in;
+  transition: background-color .4s ease-in;
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: auto;
+  padding: 0 2em;
 }
 
 @media (max-width: 1200px) {
   .container {
-    width: 80%;
+    width: 90%;
+    padding: 0;
   }
 }
 
@@ -50,6 +54,23 @@ body {
           user-select: none;
 }
 
+.header-nav .header-content .logo {
+  margin-right: 3em;
+}
+
+@media (max-width: 464px) {
+  .header-nav .header-content .logo {
+    margin-bottom: 1.5em;
+  }
+}
+
+@media (max-width: 362px) {
+  .header-nav .header-content .logo {
+    font-size: .9em;
+    margin-right: 0;
+  }
+}
+
 .header-nav .header-content .theme-switch {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -68,8 +89,6 @@ body {
 
 main {
   padding: 50px 0;
-  -webkit-transition: background-color .4s ease-in;
-  transition: background-color .4s ease-in;
 }
 
 main .search {
@@ -117,6 +136,12 @@ main .search .input-search input {
   transition: all .4s ease-in, box-shadow .2s ease-in, -webkit-box-shadow .2s ease-in;
 }
 
+@media (max-width: 739px) {
+  main .search .input-search input {
+    margin-bottom: 1em;
+  }
+}
+
 main .search .input-search input::-webkit-input-placeholder {
   color: #92a5af;
 }
@@ -162,14 +187,36 @@ main .countries-list {
   grid-gap: 65px;
 }
 
+@media (max-width: 1024px) {
+  main .countries-list {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  main .countries-list {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  main .countries-list {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 main .countries-list .country {
   background-color: white;
   -webkit-box-shadow: 0 0 10px #ededed;
           box-shadow: 0 0 10px #ededed;
   border-radius: 5px;
   overflow: hidden;
-  -webkit-transition: all .2s ease-in;
-  transition: all .2s ease-in;
+  min-height: 300px;
+  -webkit-transition: all .2s ease-in-out, background-color .4s ease-in;
+  transition: all .2s ease-in-out, background-color .4s ease-in;
   cursor: pointer;
 }
 
@@ -257,9 +304,6 @@ main .countries-list .country .country-info > * {
 
 .dark {
   color: white;
-}
-
-.dark main {
   background-color: #202c37;
 }
 
