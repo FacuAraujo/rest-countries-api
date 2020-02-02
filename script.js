@@ -8,9 +8,7 @@ const countriesList = document.querySelector('.countries-list');
 // Petición a la API
 fetch('https://restcountries.eu/rest/v2/all')
     .then(response => response.json())
-    .then(function(countries){
-        console.log(countries);        
-        
+    .then(function(countries){ 
         //Recorrer array con los paises 
         countries.forEach(country => {            
             // Template String
@@ -29,6 +27,8 @@ fetch('https://restcountries.eu/rest/v2/all')
             // Insertando Template en la lista de paises
             countriesList.insertAdjacentHTML('beforeend', countryCard);
         });
+
+        document.querySelector('.loading').style.display = "none";
     });
 
 // THEME SWITCH
