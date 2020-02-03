@@ -14,6 +14,7 @@ fetch('https://restcountries.eu/rest/v2/all')
         countries.forEach(country => {            
             // Template String
             var countryCard = `
+                                <a href="country.html?${country.alpha3Code}">
                                 <article class="country">
                                 <div class="flag" style="background-image: url(${country.flag});"></div>
                                 <div class="country-info">
@@ -22,7 +23,8 @@ fetch('https://restcountries.eu/rest/v2/all')
                                     <div class="region"><span>Region: </span>${country.region}</div>
                                     <div class="capital"><span>Capital: </span>${country.capital}</div>
                                 </div>
-                                </article>                                
+                                </article>
+                                </a>                               
                                 `;
 
             // Insertando Template en la lista de paises
@@ -32,6 +34,7 @@ fetch('https://restcountries.eu/rest/v2/all')
             const searchBlock = document.querySelector('.search').style.display = "flex";
         });
 
+        // Ocultando el loading
         document.querySelector('.loading').style.display = "none";
     });
 
